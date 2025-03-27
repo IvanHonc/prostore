@@ -10,6 +10,7 @@ const LoadingPage = () => {
         height={150}
         alt='Loading...'
         unoptimized
+        className='w-full h-full max-w-[150px] max-h-[150px]'
       />
     </div>
   );
