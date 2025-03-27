@@ -17,13 +17,13 @@ export async function signInWithCredentials(
 
     await signIn('credentials', user);
 
-    return { succes: true, message: 'Signed in succesfully' };
+    return { success: true, message: 'Signed in succesfully' };
   } catch (error) {
     if (isRedirectError(error)) {
       throw error;
     }
 
-    return { succes: false, message: 'Invalid credentials' };
+    return { success: false, message: 'Invalid credentials' };
   }
 }
 
