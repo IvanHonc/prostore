@@ -6,8 +6,8 @@ const LoadingPage = () => {
     <div className='flex justify-center items-center h-screen w-screen'>
       <Image
         src={loader}
-        height={150}
         width={150}
+        height={150}
         alt='Loading...'
         unoptimized
       />
