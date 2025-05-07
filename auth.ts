@@ -70,7 +70,8 @@ export const config = {
       return session;
     },
 
-    async jwt({ session, user, trigger, token }: any) {
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    async jwt({ user, token }: any) {
       // Assign user fields to token
       if (user) {
         token.role = user.role;
