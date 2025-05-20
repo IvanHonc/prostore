@@ -1,6 +1,7 @@
 'use client';
 import { Button } from '@/components/ui/button';
 import { useRouter } from 'next/navigation';
+import { Plus } from 'lucide-react';
 import { CartItem } from '@/types';
 import { useToast } from '@/hooks/use-toast';
 import { ToastAction } from '@/components/ui/toast';
@@ -22,7 +23,7 @@ const AddToCart = ({ item }: { item: CartItem }) => {
     }
 
     toast({
-      description: `${item.name} added to cart`,
+      description: res.message,
       action: (
         <ToastAction
           className='bg-primary text-white hover:bg-gray-800'
@@ -35,6 +36,7 @@ const AddToCart = ({ item }: { item: CartItem }) => {
 
   return (
     <Button className='w-full' type='button' onClick={handleAddToCart}>
+      <Plus className='w-4 h-4'></Plus>
       Add To Cart
     </Button>
   );
